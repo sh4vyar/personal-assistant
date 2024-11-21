@@ -14,7 +14,7 @@ def listen():
     with sr.Microphone() as source:
         print("Listening...")
         try:
-            audio = recognizer.listen(source, timeout=5)
+            audio = recognizer.listen(source, timeout=10)
             command = recognizer.recognize_google(audio).lower()
             print(f"You said: {command}")
             return command

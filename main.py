@@ -12,7 +12,9 @@ def main():
             continue
 
         if "weather" in command:
-            speak(get_weather(get_city()))
+            res = get_weather(get_city())
+            print(res)
+            speak(res)
         elif "search" in command:
             query = command.replace("search", "").strip()
             result = search_web(query)
